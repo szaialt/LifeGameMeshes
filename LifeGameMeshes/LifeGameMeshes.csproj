@@ -1,0 +1,182 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{9F698231-3DED-4D4A-AF72-CEFA07262423}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>LifeGameMeshes</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Tao.Sdl, Version=1.2.8.1, Culture=neutral" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="color.cs" />
+    <Compile Include="ColorHandler.cs" />
+    <Compile Include="coordinate_calculators\CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\CoordinateCalculatorFactory.cs" />
+    <Compile Include="coordinate_calculators\HexagonCoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\HexagonSquareTriangleCoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\HexagonTriangle2CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\HexagonTriangleCoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Kite5CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Pentagon10CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Pentagon11CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Pentagon12CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Pentagon14CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Pentagon1CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Pentagon3CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Pentagon4CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Rectangle1CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\Rectangle2CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\RectangleSquareCoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\SquareCoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\SquareTriangle1CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\TiledRectangle1CoordinateCalculator.cs" />
+    <Compile Include="coordinate_calculators\TriangleCoordinateCalculator.cs" />
+    <Compile Include="MainDrawing.cs" />
+    <Compile Include="matrix_handlers\MatrixHandler.cs" />
+    <Compile Include="matrix_handlers\MatrixType.cs" />
+    <Compile Include="matrix_handlers\QuadraticMatrixHandler.cs" />
+    <Compile Include="MeshSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeshType.cs" />
+    <Compile Include="neighbourhoods\DodecagonHexagonSquareUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\DodecagonTriangleUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonKnightNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonSquareTriangleConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonSquareTriangleUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonTriangle2ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonTriangle2UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonTriangleConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonTriangleUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\HexagonUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Kite5GrandConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Kite5ObliqueConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Kite5SmallConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Kite5UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\ModuloIndexableList.cs" />
+    <Compile Include="neighbourhoods\NeighbourhoodHandler.cs" />
+    <Compile Include="neighbourhoods\NeighbourhoodType.cs" />
+    <Compile Include="neighbourhoods\NeightbourhoodFactory.cs" />
+    <Compile Include="neighbourhoods\OctogonSquareUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon10ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon10ObliqueNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon10UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon11ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon11ObliqueNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon11UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon12ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon12ObliqueNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon12UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon14ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon14UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon1ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon1ObliqueNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon1UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon3UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon4ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Pentagon4UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\QuadraticConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\QuadraticKnightNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\QuadraticUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Rectangle1UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Rectangle2ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\Rectangle2UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\RectangleSquareConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\RectangleSquareUlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\SquareTriangle1ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\SquareTriangle1UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\SquareTriangle2ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\SquareTriangle2UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\TiledRectangle1ConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\TiledRectangle1ObliqueNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\TiledRectangle1UlamNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\TriangleConwayNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\TriangleKnightNeightbourHandler.cs" />
+    <Compile Include="neighbourhoods\TriangleUlamNeightbourHandler.cs" />
+    <Compile Include="RuleSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="forditas.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\LifeGameMeshes\v16\.suo" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

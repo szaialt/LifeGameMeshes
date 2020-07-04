@@ -1,0 +1,9 @@
+C:\Users\szekera\LifeGameMeshes\obj\x86\Debug\LifeGameMeshes.csproj.CoreCompileInputs.cache
+C:\Users\szekera\LifeGameMeshes\bin\Debug\WindowsApplication.exe.config
+C:\Users\szekera\LifeGameMeshes\bin\Debug\WindowsApplication.exe
+C:\Users\szekera\LifeGameMeshes\bin\Debug\WindowsApplication.pdb
+C:\Users\szekera\LifeGameMeshes\bin\Debug\Tao.Sdl.dll
+C:\Users\szekera\LifeGameMeshes\bin\Debug\Tao.Sdl.dll.config
+C:\Users\szekera\LifeGameMeshes\obj\x86\Debug\LifeGameMeshes.csproj.CopyComplete
+C:\Users\szekera\LifeGameMeshes\obj\x86\Debug\WindowsApplication.exe
+C:\Users\szekera\LifeGameMeshes\obj\x86\Debug\WindowsApplication.pdb
